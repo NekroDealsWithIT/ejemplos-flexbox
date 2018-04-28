@@ -1,0 +1,33 @@
+
+.flex{
+	box-sizing: boder-box;
+	
+	/* pone los elementos hijos 1 abajo del otro */
+	display:flex;
+	
+	/* cuando no tengas mas espacio baja */
+	flex-wrap:wrap;
+}
+.flex-item{
+	background-color: rebeccapurple;
+	height: 100px;
+	border: 2px solid gold;
+	
+	/* en los hijos implica que ocupe todo el elemento disponible */
+	flex-grow:1;
+	
+	/* minimo en width funciona con el wrap */
+	/* al achicar no aparece el overflow y achica, no funciona como el min-width */
+	flex-basis:350px;
+	
+	color:#fff;
+	
+	/* convertir al hijo en padre no afecta su comportamiento externo solo con lo interior */
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+/* seleccion de elementos hermanos */
+.flex-item:nth-child(3){
+	flex-grow:5;
+}
